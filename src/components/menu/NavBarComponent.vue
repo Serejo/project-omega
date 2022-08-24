@@ -15,10 +15,10 @@
         @click="darkMode"
         class="mt-5"
       ></v-switch> -->
-      <span class="text--text text-body-1"> {{ getUserName }}</span>
+      <!-- <span class="text--text text-body-1"> {{ getUserName }}</span> -->
       <div>
         <span class="text-truncate font-weight-bold"
-          >Olá, {{ getWhoami.NOME }}</span
+          >Olá, {{ getWhoami.NOME }}.</span
         >
       </div>
       <div class="ml-2">
