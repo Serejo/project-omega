@@ -6,47 +6,35 @@
           <v-img src="../assets/loginImage.png"></v-img>
         </v-col>
         <v-col align="center" class="align-self-center">
-          <div class="base">
+          <div class="background rounded-xl">
             <div>
               <v-img
                 src="../assets/logo.png"
                 width="18rem"
-                height="5rem"
+                height="7rem"
               ></v-img>
-              <v-row no-gutters class="justify-center mt-0 mb-1">
-                <!-- <v-col cols="6" align="start">
-                <div class="text-subtitle-1">Login</div>
-              </v-col> -->
-              </v-row>
-              <v-row no-gutters class="justify-center">
+              <v-row no-gutters class="justify-center my-2">
                 <v-col cols="10">
                   <v-text-field
                     label="Usuário"
-                    placeholder="Usuário"
-                    solo
-                    flat
+                    outlined
+                    dense
                     v-model="modelLogin.login"
                   ></v-text-field>
                 </v-col>
               </v-row>
-              <v-row no-gutters class="justify-center mb-1">
-                <!-- <v-col cols="6" align="start">
-                <div class="text-subtitle-1">Senha</div>
-              </v-col> -->
-              </v-row>
             </div>
             <div>
-              <v-row no-gutters class="justify-center">
+              <v-row no-gutters class="justify-center mt-2">
                 <v-col cols="10">
                   <v-text-field
                     label="Senha"
-                    placeholder="Senha"
                     :type="show4 ? 'text' : 'password'"
                     :append-icon="show4 ? 'mdi-eye' : 'mdi-eye-off'"
                     :rules="[rules.required]"
                     @click:append="show4 = !show4"
-                    solo
-                    flat
+                    outlined
+                    dense
                     v-model="modelLogin.password"
                   ></v-text-field>
                 </v-col>
@@ -65,7 +53,6 @@
                         text-transform: none !important;
                         font-weight: bolder;
                       "
-                      flat
                       max-width="320px"
                       @click="
                         onGetLoginData(modelLogin.login, modelLogin.password)
@@ -76,16 +63,19 @@
                 </v-col>
               </v-row>
             </div>
-            <div>
-              <v-row justify="space-between">
-                <div>
-                  <v-checkbox
-                    v-model="lembrarCheckBox"
-                    label="Lembrar"
-                  ></v-checkbox>
+            <div class="pt-3 pb-6">
+              <v-row justify="space-around">
+                <div class="justify-space-around">
+                  <v-checkbox input-value label="Lembrar-me"></v-checkbox>
+                  <input type="checkbox" />
+                  <label class="ml-2 font-weight-bold primary--text"
+                    >Lembrar-me</label
+                  >
                 </div>
                 <div>
-                  <span class="font-bold">Criar Conta</span>
+                  <span class="font-weight-bold primary--text"
+                    >Criar Conta</span
+                  >
                 </div>
               </v-row>
             </div>
@@ -116,7 +106,7 @@ export default {
     show4: false,
     senha: "Password",
     rules: {
-      required: (value) => !!value || "O campo não pode ser vazio",
+      required: (value) => !!value || "Insira sua senha",
     },
   }),
   computed: {
