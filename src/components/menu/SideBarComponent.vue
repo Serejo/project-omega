@@ -72,19 +72,19 @@ export default {
       items: [
         {
           title: "Dashboard",
-          icon: "mdi-house",
+          icon: "mdi-home-outline",
           url: "/dashboard",
           admin: true,
         },
         {
           title: "Pacientes",
-          icon: "mdi-tag-outline",
+          icon: "mdi-account-outline",
           url: "/pacientes",
           admin: false,
         },
         {
           title: "Agenda",
-          icon: "mdi-city",
+          icon: "mdi-notebook-outline",
           url: "/agenda",
           admin: false,
         },
