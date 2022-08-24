@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
-import '@mdi/font/css/materialdesignicons.css'
+import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/dist/vuetify.min.css";
 import VueMask from "v-mask";
 import pt from "vuetify/lib/locale/pt";
@@ -14,17 +14,18 @@ export default new Vuetify({
     themes: {
       light: {
         primary: "#9333ea",
-        background: '#ffffff',
         secondary: "#c084fc",
+        orange: "$db802d",
+        background: "#ffffff",
         base: "#f3f4f6",
         base_dark: "#dadfe0",
         navy: "#0f2733",
         text: "#002233",
       },
       dark: {
-        primary: "#F9820B",
-        secondary: "#E5620B",
-        background: '#222426',
+        primary: "#9333ea",
+        secondary: "#c084fc",
+        background: "#222426",
         base: "#181a1b",
         base_dark: "#2b2f31",
         navy: "#eeeeee",

@@ -5,18 +5,19 @@
         class="d-lg-none d-xl-none"
         @click="toggleDrawer(true)"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title
+      <!-- <v-toolbar-title
         class="flex text-start text-h4 text--text font-weight-bold"
         >{{ name }}</v-toolbar-title
-      >
+      > -->
       <v-spacer></v-spacer>
-      <v-switch
+      <!-- <v-switch
         v-model="tougle"
         inset
         @click="darkMode"
         class="mt-5"
-      ></v-switch>
+      ></v-switch> -->
       <span class="text--text text-body-1"> {{ getUserName }}</span>
+      <div><v-icon size="30" color="">mdi-account-circle</v-icon></div>
       <div v-for="(whoami, i) in getWhoami" :key="i">
         <span class="text-truncate">{{ primeiroNome(whoami.NOME) }}</span>
       </div>

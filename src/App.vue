@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <div class="background" style="height: 100%">
+    <div class="base" style="height: 100%">
       <navbar-component
         v-if="!['Login'].includes($route.name)"
         :name="$route.name"

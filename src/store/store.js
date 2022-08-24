@@ -4,7 +4,8 @@ import VuexPersistence from "vuex-persist";
 
 import notifications from "./notifications";
 import login from "./login";
-
+import whoami from "./whoami";
+import menu from "./menu";
 
 Vue.use(Vuex);
 
@@ -17,6 +18,8 @@ export default new Vuex.Store({
     namespaced: true,
     notifications,
     login,
+    whoami,
+    menu,
   },
   plugins: [vuexLocal.plugin],
 });

@@ -4,7 +4,7 @@
       floating
       :temporary="miniResponsive"
       app
-      color="base_dark"
+      color="background"
       id="sidebar"
       v-model="drawerModel"
     >
@@ -12,10 +12,9 @@
         <v-list-item-content>
           <v-list-item-title class="mt-0">
             <v-img
-              src="/img/logo2.svg"
-              class="mt-0 mb-5 justify-center"
-              contain
-              height="50"
+              src="../../assets/logo.png"
+              class="mt-0 mb-0 justify-center"
+              height="7rem"
             />
           </v-list-item-title>
         </v-list-item-content>
@@ -73,44 +72,32 @@ export default {
       items: [
         {
           title: "Dashboard",
-          icon: "mdi-view-dashboard-outline",
+          icon: "mdi-house",
           url: "/dashboard",
           admin: true,
         },
         {
-          title: "Recepção",
+          title: "Pacientes",
           icon: "mdi-tag-outline",
-          url: "/detalhes-recepcao",
+          url: "/pacientes",
           admin: false,
         },
         {
-          title: "Transportadoras",
+          title: "Agenda",
           icon: "mdi-city",
-          url: "/transportadoras",
+          url: "/agenda",
           admin: false,
         },
         {
-          title: "Coletas Agendadas",
+          title: "Prontuário",
           icon: "mdi-file-document-outline",
-          url: "/coletas-agendadas",
+          url: "/prontuario",
           admin: false,
         },
-        // {
-        //   title: "Gerar Protocolo",
-        //   icon: "mdi-sticker-check-outline",
-        //   url: "/gerar-protocolo",
-        //   admin: false,
-        // },
         {
-          title: "Motoristas",
+          title: "Perfis",
           icon: "mdi-clipboard-account-outline",
-          url: "/motoristas",
-          admin: false,
-        },
-        {
-          title: "Veículos",
-          icon: "mdi-truck-outline",
-          url: "/veiculos",
+          url: "/perfis",
           admin: false,
         },
       ],
