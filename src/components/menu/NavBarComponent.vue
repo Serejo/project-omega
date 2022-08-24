@@ -1,14 +1,13 @@
 <template>
-  <v-card flat>
+  <v-card flat class="mt-5">
     <v-app-bar flat color="base" absolute app>
       <v-app-bar-nav-icon
         class="d-lg-none d-xl-none"
         @click="toggleDrawer(true)"
       ></v-app-bar-nav-icon>
-      <!-- <v-toolbar-title
-        class="flex text-start text-h4 text--text font-weight-bold"
-        >{{ name }}</v-toolbar-title
-      > -->
+      <v-toolbar-title class="flex text-start text--text">{{
+        name
+      }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- <v-switch
         v-model="tougle"
@@ -17,9 +16,13 @@
         class="mt-5"
       ></v-switch> -->
       <span class="text--text text-body-1"> {{ getUserName }}</span>
-      <div><v-icon size="30" color="">mdi-account-circle</v-icon></div>
-      <div v-for="(whoami, i) in getWhoami" :key="i">
-        <span class="text-truncate">{{ primeiroNome(whoami.NOME) }}</span>
+      <div>
+        <span class="text-truncate font-weight-bold"
+          >Olá, {{ getWhoami.NOME }}</span
+        >
+      </div>
+      <div class="ml-2">
+        <v-icon size="30" color="">mdi-account-circle</v-icon>
       </div>
     </v-app-bar>
   </v-card>
@@ -61,10 +64,6 @@ export default {
       this.tougle = this.getDarkMode;
     },
 
-    // ...mapActions("login", ["user"]),
-    primeiroNome(nome) {
-      return nome.split(" ")[0];
-    },
     toggleDrawer(value) {
       this.$store.dispatch("menu/setDrawer", value);
     },

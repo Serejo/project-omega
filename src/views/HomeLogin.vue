@@ -57,7 +57,6 @@
                     :loading="isLoading"
                     block
                     :class="hover ? 'navy--text' : 'navy--text'"
-                    class="m-texto"
                     style="text-transform: none !important; font-weight: bolder"
                     max-width="320px"
                     @click="
@@ -120,9 +119,6 @@ export default {
 };
 </script>
 <style scoped>
-.m-texto:hover {
-  /* transition: 300ms all ease-in-out; */
-}
 .drectd {
   padding: 10%;
 }
