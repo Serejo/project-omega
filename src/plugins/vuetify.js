@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
+import '@mdi/font/css/materialdesignicons.css'
 import "vuetify/dist/vuetify.min.css";
 import VueMask from "v-mask";
 import pt from "vuetify/lib/locale/pt";

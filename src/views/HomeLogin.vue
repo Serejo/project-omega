@@ -64,13 +64,9 @@
               </v-row>
             </div>
             <div class="pt-3 pb-6">
-              <v-row justify="space-around">
-                <div class="justify-space-around">
+              <v-row justify="space-around" align="center">
+                <div>
                   <v-checkbox input-value label="Lembrar-me"></v-checkbox>
-                  <input type="checkbox" />
-                  <label class="ml-2 font-weight-bold primary--text"
-                    >Lembrar-me</label
-                  >
                 </div>
                 <div>
                   <span class="font-weight-bold primary--text"
