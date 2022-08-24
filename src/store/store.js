@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import VuexPersistence from "vuex-persist";
 
 import notifications from "./notifications";
+import login from "./login";
 
 
 Vue.use(Vuex);
@@ -15,6 +16,7 @@ export default new Vuex.Store({
   modules: {
     namespaced: true,
     notifications,
+    login,
   },
   plugins: [vuexLocal.plugin],
 });
