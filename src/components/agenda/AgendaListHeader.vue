@@ -22,7 +22,7 @@
               block
               @click="search"
               :color="hover ? 'secondary' : 'primary'"
-              class="navy--text text-truncate"
+              class="background--text text-truncate"
               style="text-transform: none !important; font-weight: bolder"
               ><v-icon>mdi-filter-outline</v-icon></v-btn
             >
@@ -36,7 +36,7 @@
               rounded
               block
               :color="hover ? 'secondary' : 'primary'"
-              class="navy--text text-truncate"
+              class="background--text text-truncate"
               @click="openCreateDrivers"
               style="text-transform: none !important; font-weight: bolder"
               >Cadastrar Agendamento</v-btn

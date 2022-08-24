@@ -22,23 +22,31 @@
     <div v-if="!getIsLoading">
       <v-row
         class="list-card background text--text mx-auto my-auto mt-2"
-        v-for="(agendados, i) in getListAgendamentos"
+        v-for="(agendado, i) in getListAgendamentos"
         :key="i"
+        align="center"
       >
         <v-col cols="12" sm="4" md="3" lg="3" xl="3" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Nome:</b>
           </span>
           <div class="pa-2 text-truncate">
-            {{ agendados.nomeCompleto }}
+            {{ agendado.nomeCompleto }}
           </div>
         </v-col>
         <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Confirmado:</b>
           </span>
-          <div class="pa-2 text-wrap primary--text font-weight-bold">
-            {{ agendados.confirmado ? "Sim" : "Não" }}
+
+          <div
+            v-if="agendado.confirmado"
+            class="pa-2 text-wrap green--text font-weight-bold"
+          >
+            {{ agendado.confirmado ? "Sim" : "Não" }}
+          </div>
+          <div v-else class="pa-2 text-wrap red--text font-weight-bold">
+            {{ agendado.confirmado ? "Sim" : "Não" }}
           </div>
         </v-col>
         <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="start">
@@ -48,9 +56,9 @@
           <v-chip
             class="pa-2 text-wrap"
             text-color="white"
-            :color="agendados.corStatus"
+            :color="agendado.corStatus"
           >
-            {{ agendados.status }}
+            {{ agendado.status }}
           </v-chip>
         </v-col>
         <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="start">
@@ -58,7 +66,7 @@
             <b>Data/Hora:</b>
           </span>
           <div class="pa-2 text-wrap">
-            {{ agendados.dataHora }}
+            {{ agendado.dataHora }}
           </div>
         </v-col>
 
@@ -67,7 +75,7 @@
             <b>Convenio:</b>
           </span>
           <div class="pa-2 text-wrap">
-            {{ agendados.convenio }}
+            {{ agendado.convenio }}
           </div>
         </v-col>
         <v-col cols="12" sm="4" md="2" lg="2" xl="2">
@@ -75,22 +83,25 @@
             <v-btn
               block
               rounded
-              color="primary"
               class="text-truncate"
-              :class="hover ? 'base--text' : 'navy--text'"
+              :color="hover ? 'secondary' : 'primary'"
+              :class="hover ? 'background--text' : 'background--text'"
               max-width="160px"
               style="text-transform: none !important; font-weight: bolder"
-              @click="openEditionDialog(agendados)"
+              @click="openStartAtendimento(agendado)"
             >
-              Editar
+              Consulta
+              <v-icon class="background--text ml-2"
+                >mdi-arrow-top-right-bold-box</v-icon
+              >
             </v-btn>
           </v-hover>
         </v-col>
       </v-row>
-      <v-dialog v-model="editDialog" max-width="720">
-        <edit-drivers-modal
+      <v-dialog v-model="startAtendimentoDialog" max-width="720">
+        <start-atendimento-modal
           :key="reRender"
-          :driver="driver"
+          :agendado="agendado"
           @closeButton="closeButton"
           @drivers="listDrivers"
         />
@@ -119,13 +130,16 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import StartAtendimentoModal from "./StartConsultaModal.vue";
 
 export default {
-  components: {},
+  components: {
+    StartAtendimentoModal,
+  },
   data: () => ({
     reRender: 0,
-    driver: {},
-    editDialog: false,
+    agendado: {},
+    startAtendimentoDialog: false,
     isLoading: false,
     urlParams: {
       page: 1,
@@ -203,11 +217,10 @@ export default {
       this.setIsLoading(false);
     },
 
-    openEditionDialog(driver) {
-      this.shippingsCompany();
+    openStartAtendimento(agendado) {
       this.reRender += 1;
-      this.editDialog = true;
-      this.driver = driver;
+      this.startAtendimentoDialog = true;
+      this.agendado = agendado;
     },
 
     closeButton() {
