@@ -1,28 +1,56 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-app id="app">
+    <div class="background" style="height: 100%">
+      <navbar-component
+        v-if="!['Login'].includes($route.name)"
+        :name="$route.name"
+      />
+      <sidebar-component v-if="!['Login'].includes($route.name)" />
+      <div>
+        <v-main>
+          <router-view />
+        </v-main>
+      </div>
+    </div>
+    <div class="overflow-visible float-end teste">
+      <error-alert />
+      <success-alert />
+    </div>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import NavbarComponent from "./components/menu/NavBarComponent.vue";
+import SidebarComponent from "./components/menu/SideBarComponent.vue";
+import ErrorAlert from "./components/messages/ErrorAlert.vue";
+import SuccessAlert from "./components/messages/SuccessAlert.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    NavbarComponent,
+    SidebarComponent,
+    ErrorAlert,
+    SuccessAlert,
   },
+  data() {
+    return {};
+  },
+  methods: {},
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  // background-color: #eeeeee;
+  text-transform: none !important;
+}
+.container {
+  max-width: 100% !important;
 }
 </style>
