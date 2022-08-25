@@ -6,34 +6,78 @@
     >
       <h3 class="">Detalhes do Paciente</h3>
     </v-card-title>
-    <v-card-text class="pb-0">
+    <v-card-text class="">
       <div>
         <v-row no-gutters class="justify-start mt-2 mb-1">
-          <v-col cols="4" align="start">
-            <div class="justify-center navy--text">
-              Nome do Paciente:
-              <p class="font-weight-bold">{{ agendado.nomeCompleto }}</p>
-            </div>
+          <v-col cols="2" align="start">
+            <div class="justify-center navy--text">Nome do Paciente:</div>
+          </v-col>
+          <v-col cols="10" align="start">
+            <v-text-field
+              ref="nomeCompleto"
+              :error-messages="errorMessages"
+              v-model="nomeCompleto"
+              outlined
+              dense
+              :placeholder="agendado.nomeCompleto || 'Nome do Paciente'"
+              solo
+              flat
+              required
+              :rules="[rules.name]"
+            ></v-text-field>
+          </v-col>
+        </v-row>
+
+        <v-row no-gutters class="justify-start mt-2 mb-1">
+          <v-col cols="2" align="start">
+            <div class="justify-center navy--text">Status do Paciente:</div>
+          </v-col>
+          <v-col cols="10" align="start">
+            <v-text-field
+              ref="statusPaciente"
+              :error-messages="errorMessages"
+              v-model="statusPaciente"
+              outlined
+              dense
+              :placeholder="agendado.status || 'Status do Paciente'"
+              solo
+              flat
+              required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row no-gutters class="justify-start mt-2 mb-1">
+          <v-col cols="2" align="start">
+            <div class="justify-center navy--text">Contato:</div>
           </v-col>
           <v-col cols="4" align="start">
-            <div class="justify-center navy--text">
-              Status do Paciente:
-              <v-chip
-                class="pa-2 text-wrap"
-                text-color="white"
-                :color="agendado.corStatus"
-              >
-                {{ agendado.status }}
-              </v-chip>
-            </div>
+            <v-text-field
+              ref="statusPaciente"
+              :error-messages="errorMessages"
+              v-model="statusPaciente"
+              outlined
+              dense
+              :placeholder="agendado.contato || '(XX) XXXXX-XXXX'"
+              solo
+              flat
+              required
+            ></v-text-field>
+          </v-col>
+          <v-col cols="2" align="start">
+            <div class="justify-center navy--text">Cep:</div>
           </v-col>
           <v-col cols="4" align="start">
-            <div class="justify-center navy--text">
-              Data da Consulta:
-              <p class="pa-2 text-wrap" text-color="white">
-                {{ agendado.dataHora }}
-              </p>
-            </div>
+            <v-text-field
+              ref="statusPaciente"
+              :error-messages="errorMessages"
+              v-model="statusPaciente"
+              outlined
+              dense
+              :placeholder="agendado.contato || 'XXXXX-XXX'"
+              solo
+              flat
+              required
+            ></v-text-field>
           </v-col>
         </v-row>
       </div>
