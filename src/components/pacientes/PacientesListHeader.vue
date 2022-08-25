@@ -14,7 +14,7 @@
           </v-text-field>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="6" md="1" lg="1" xl="1">
+      <v-col cols="1">
         <v-row no-gutters>
           <v-hover v-slot="{ hover }">
             <v-btn
@@ -29,7 +29,7 @@
           </v-hover>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="6" md="3" lg="3" xl="3">
+      <v-col cols="3">
         <v-row no-gutters>
           <v-hover v-slot="{ hover }">
             <v-btn
