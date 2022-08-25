@@ -5,7 +5,7 @@
   </v-container>
 </template>
 <script>
-import AgendaList from "../components/agenda/AgendaList.vue";
+import AgendaList from "../components/agenda/AgendaListBody.vue";
 import AgendaListHeader from "../components/agenda/AgendaListHeader.vue";
 export default {
   components: { AgendaListHeader, AgendaList },
