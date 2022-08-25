@@ -78,7 +78,7 @@ export default {
         },
         {
           title: "Pacientes",
-          icon: "mdi-account-outline",
+          icon: "mdi-account-multiple-outline",
           url: "/pacientes",
           admin: false,
         },
@@ -94,10 +94,16 @@ export default {
           url: "/prontuario",
           admin: false,
         },
+        // {
+        //   title: "Perfis",
+        //   icon: "mdi-clipboard-account-outline",
+        //   url: "/perfis",
+        //   admin: false,
+        // },
         {
-          title: "Perfis",
-          icon: "mdi-clipboard-account-outline",
-          url: "/perfis",
+          title: "Usuários",
+          icon: "mdi-account-supervisor-circle",
+          url: "/usuarios",
           admin: false,
         },
       ],

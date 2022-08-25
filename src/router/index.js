@@ -8,6 +8,8 @@ import Agenda from "../views/Agenda.vue";
 import Pacientes from "../views/Pacientes.vue";
 import Prontuario from "../views/Prontuario.vue";
 import Perfis from "../views/Perfis.vue";
+import Usuarios from "../views/Usuarios.vue";
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -43,6 +45,11 @@ const router = new VueRouter({
       name: "Perfis",
       path: "/perfis",
       component: Perfis,
+    },
+    {
+      name: "Usuarios",
+      path: "/usuarios",
+      component: Usuarios,
     },
   ],
 });
