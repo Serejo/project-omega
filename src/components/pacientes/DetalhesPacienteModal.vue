@@ -4,7 +4,7 @@
       class="justify-center navy--text"
       style="text-transform: none !important; font-weight: bolder"
     >
-      <h3 class="">Iniciar Consulta</h3>
+      <h3 class="">Detalhes do Paciente</h3>
     </v-card-title>
     <v-card-text class="pb-0">
       <div>
