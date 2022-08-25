@@ -6,7 +6,7 @@
           class="
             d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -18,7 +18,7 @@
           class="
             d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -30,7 +30,7 @@
           class="
             d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -42,7 +42,7 @@
           class="
             d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -54,7 +54,7 @@
           class="
             d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >

@@ -6,28 +6,30 @@
         align="start"
         cols="3"
       >
-        <div class="pa-2 text-truncate font-weight-bold">Nome</div>
+        <div class="pa-2 text-truncate text--text font-weight-bold">Nome</div>
       </v-col>
       <v-col
         class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
         align="start"
         cols="2"
       >
-        <div class="pa-2 text-truncate font-weight-bold">Confirmado</div>
+        <div class="pa-2 text-truncate text--text font-weight-bold">
+          Confirmado
+        </div>
       </v-col>
       <v-col
         class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
         align="start"
         cols="1"
       >
-        <div class="pa-2 text-truncate font-weight-bold">Status</div>
+        <div class="pa-2 text-truncate text--text font-weight-bold">Status</div>
       </v-col>
       <v-col
         class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
         align="center"
         cols="1"
       >
-        <div class="pa-2 text-truncate font-weight-bold">Data</div>
+        <div class="pa-2 text-truncate text--text font-weight-bold">Data</div>
       </v-col>
 
       <v-col
@@ -35,7 +37,9 @@
         align="center"
         cols="3"
       >
-        <div class="pa-2 text-truncate font-weight-bold">Convênio</div>
+        <div class="pa-2 text-truncate text--text font-weight-bold">
+          Convênio
+        </div>
       </v-col>
       <v-col align="start" cols="2"> </v-col>
     </v-row>

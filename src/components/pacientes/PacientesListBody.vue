@@ -6,7 +6,7 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -18,7 +18,7 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -30,7 +30,7 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >
@@ -43,7 +43,7 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate
+            text-truncate text--text
             font-weight-bold
           "
         >

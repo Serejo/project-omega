@@ -9,12 +9,12 @@
         name
       }}</v-toolbar-title>
       <v-spacer></v-spacer>
-      <!-- <v-switch
+      <v-switch
         v-model="tougle"
         inset
         @click="darkMode"
         class="mt-5"
-      ></v-switch> -->
+      ></v-switch>
       <!-- <span class="text--text text-body-1"> {{ getUserName }}</span> -->
       <div>
         <span class="text-truncate font-weight-bold"
