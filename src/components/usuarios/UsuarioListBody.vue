@@ -2,19 +2,64 @@
   <div class="background rounded-b-xl">
     <v-row class="mx-auto my-auto mt-3">
       <v-col align="start" cols="4">
-        <div class="pa-2 text-truncate font-weight-bold">Usuário</div>
+        <div
+          class="
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            pa-2
+            text-truncate
+            font-weight-bold
+          "
+        >
+          Usuário
+        </div>
       </v-col>
       <v-col align="start" cols="1">
-        <div class="pa-2 text-truncate font-weight-bold">Status</div>
+        <div
+          class="
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            pa-2
+            text-truncate
+            font-weight-bold
+          "
+        >
+          Status
+        </div>
       </v-col>
       <v-col align="center" cols="2">
-        <div class="pa-2 text-truncate font-weight-bold">Perfil</div>
+        <div
+          class="
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            pa-2
+            text-truncate
+            font-weight-bold
+          "
+        >
+          Perfil
+        </div>
       </v-col>
       <v-col align="center" cols="2">
-        <div class="pa-2 text-truncate font-weight-bold">Confirmado</div>
+        <div
+          class="
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            pa-2
+            text-truncate
+            font-weight-bold
+          "
+        >
+          Confirmado
+        </div>
       </v-col>
       <v-col align="center" cols="2">
-        <div class="pa-2 text-truncate font-weight-bold">Empresa</div>
+        <div
+          class="
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            pa-2
+            text-truncate
+            font-weight-bold
+          "
+        >
+          Empresa
+        </div>
       </v-col>
       <v-col align="start" cols="3"> </v-col>
     </v-row>
@@ -25,7 +70,7 @@
         :key="i"
         align="center"
       >
-        <v-col cols="12" sm="4" md="4" lg="4" xl="4" align="start">
+        <v-col cols="4" sm="4" md="4" lg="4" xl="4" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Nome:</b>
           </span>
@@ -33,7 +78,7 @@
             {{ paciente.nomeCompleto }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="center">
+        <v-col cols="4" sm="4" md="1" lg="1" xl="1" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Status:</b>
           </span>
@@ -45,7 +90,7 @@
             {{ paciente.status }}
           </v-chip>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="center">
+        <v-col cols="4" sm="4" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Perfil:</b>
           </span>
@@ -53,7 +98,7 @@
             {{ paciente.perfil }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="center">
+        <v-col cols="6" sm="4" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Confirmado:</b>
           </span>
@@ -67,7 +112,7 @@
             {{ paciente.confirmado ? "Sim" : "Não" }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2">
+        <v-col cols="6" sm="4" md="2" lg="2" xl="2">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Empresa:</b>
           </span>
