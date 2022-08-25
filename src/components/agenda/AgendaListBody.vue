@@ -1,20 +1,40 @@
 <template>
   <div class="background rounded-xl">
     <v-row class="mx-auto my-auto mt-3">
-      <v-col align="start" cols="3">
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="start"
+        cols="3"
+      >
         <div class="pa-2 text-truncate font-weight-bold">Nome</div>
       </v-col>
-      <v-col align="start" cols="2">
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="start"
+        cols="2"
+      >
         <div class="pa-2 text-truncate font-weight-bold">Confirmado</div>
       </v-col>
-      <v-col align="start" cols="1">
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="start"
+        cols="1"
+      >
         <div class="pa-2 text-truncate font-weight-bold">Status</div>
       </v-col>
-      <v-col align="center" cols="1">
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="center"
+        cols="1"
+      >
         <div class="pa-2 text-truncate font-weight-bold">Data</div>
       </v-col>
 
-      <v-col align="center" cols="3">
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="center"
+        cols="3"
+      >
         <div class="pa-2 text-truncate font-weight-bold">Convênio</div>
       </v-col>
       <v-col align="start" cols="2"> </v-col>
@@ -26,7 +46,7 @@
         :key="i"
         align="center"
       >
-        <v-col cols="12" sm="4" md="3" lg="3" xl="3" align="start">
+        <v-col cols="6" sm="4" md="3" lg="3" xl="3" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Nome:</b>
           </span>
@@ -34,7 +54,7 @@
             {{ agendado.nomeCompleto }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="start">
+        <v-col cols="6" sm="4" md="2" lg="2" xl="2" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Confirmado:</b>
           </span>
@@ -49,7 +69,7 @@
             {{ agendado.confirmado ? "Sim" : "Não" }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="start">
+        <v-col cols="6" sm="4" md="1" lg="1" xl="1" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Status:</b>
           </span>
@@ -61,7 +81,7 @@
             {{ agendado.status }}
           </v-chip>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="start">
+        <v-col cols="6" sm="4" md="1" lg="1" xl="1" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Data/Hora:</b>
           </span>

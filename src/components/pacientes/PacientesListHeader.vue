@@ -1,7 +1,7 @@
 <template>
   <div class="mt-3">
     <v-row no gutters class="justify-center mt-3">
-      <v-col cols="12" sm="6" md="4" lg="4" xl="4">
+      <v-col cols="6" sm="6" md="4" lg="4" xl="4">
         <v-row no-gutters>
           <v-text-field
             placeholder="Nome"
@@ -29,7 +29,7 @@
           </v-hover>
         </v-row>
       </v-col>
-      <v-col cols="3">
+      <v-col cols="6" sm="6" md="3" lg="3" xl="3">
         <v-row no-gutters>
           <v-hover v-slot="{ hover }">
             <v-btn
