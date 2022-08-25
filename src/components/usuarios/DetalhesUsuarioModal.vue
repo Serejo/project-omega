@@ -91,7 +91,7 @@
             :color="hover ? 'secondary' : 'primary'"
             x-large
             block
-            class="navy--text"
+            class="text--text"
             style="text-transform: none !important; font-weight: bolder"
             max-width="220px"
             @click="startConsulta()"

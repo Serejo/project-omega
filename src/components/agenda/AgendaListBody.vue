@@ -6,14 +6,14 @@
         align="start"
         cols="3"
       >
-        <div class="pa-2 text-truncate text--text font-weight-bold">Nome</div>
+        <div class="pa-2 text-truncate navy--text font-weight-bold">Nome</div>
       </v-col>
       <v-col
         class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
         align="start"
         cols="2"
       >
-        <div class="pa-2 text-truncate text--text font-weight-bold">
+        <div class="pa-2 text-truncate navy--text font-weight-bold">
           Confirmado
         </div>
       </v-col>
@@ -22,14 +22,14 @@
         align="start"
         cols="1"
       >
-        <div class="pa-2 text-truncate text--text font-weight-bold">Status</div>
+        <div class="pa-2 text-truncate navy--text font-weight-bold">Status</div>
       </v-col>
       <v-col
         class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
         align="center"
         cols="1"
       >
-        <div class="pa-2 text-truncate text--text font-weight-bold">Data</div>
+        <div class="pa-2 text-truncate navy--text font-weight-bold">Data</div>
       </v-col>
 
       <v-col
@@ -37,7 +37,7 @@
         align="center"
         cols="3"
       >
-        <div class="pa-2 text-truncate text--text font-weight-bold">
+        <div class="pa-2 text-truncate navy--text font-weight-bold">
           Convênio
         </div>
       </v-col>
@@ -45,7 +45,7 @@
     </v-row>
     <div v-if="!getIsLoading">
       <v-row
-        class="list-card background text--text mx-auto my-auto mt-2"
+        class="list-card background navy--text mx-auto my-auto mt-2"
         v-for="(agendado, i) in getListAgendamentos"
         :key="i"
         align="center"
@@ -109,13 +109,13 @@
               rounded
               class="text-truncate"
               :color="hover ? 'secondary' : 'primary'"
-              :class="hover ? 'background--text' : 'background--text'"
+              :class="hover ? 'text--text' : 'text--text'"
               max-width="160px"
               style="text-transform: none !important; font-weight: bolder"
               @click="openStartAtendimento(agendado)"
             >
               Consulta
-              <v-icon class="background--text ml-2"
+              <v-icon class="text--text ml-2"
                 >mdi-arrow-top-right-bold-box</v-icon
               >
             </v-btn>

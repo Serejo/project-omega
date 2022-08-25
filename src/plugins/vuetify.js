@@ -13,18 +13,18 @@ export default new Vuetify({
     dark: false,
     themes: {
       light: {
-        primary: "#9333ea",
-        secondary: "#c084fc",
+        primary: "#371E56",
+        secondary: "#46216D",
         orange: "#f5821f",
         background: "#ffffff",
         base: "#f3f4f6",
         base_dark: "#dadfe0",
         navy: "#0f2733",
-        text: "#002233",
+        text: "#eeeeee",
       },
       dark: {
-        primary: "#9333ea",
-        secondary: "#c084fc",
+        primary: "#371E56",
+        secondary: "#46216D",
         orange: "#f5821f",
         background: "#222426",
         base: "#181a1b",

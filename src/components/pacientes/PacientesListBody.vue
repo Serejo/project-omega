@@ -6,7 +6,8 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate text--text
+            text-truncate
+            navy--text
             font-weight-bold
           "
         >
@@ -18,7 +19,8 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate text--text
+            text-truncate
+            navy--text
             font-weight-bold
           "
         >
@@ -30,7 +32,8 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate text--text
+            text-truncate
+            navy--text
             font-weight-bold
           "
         >
@@ -43,7 +46,8 @@
           class="
             pa-2
             d-none d-sm-none d-md-block d-lg-block d-xl-block
-            text-truncate text--text
+            text-truncate
+            navy--text
             font-weight-bold
           "
         >
@@ -54,7 +58,7 @@
     </v-row>
     <div v-if="!getIsLoading">
       <v-row
-        class="list-card background text--text mx-auto my-auto mt-2"
+        class="list-card background navy--text mx-auto my-auto mt-2"
         v-for="(paciente, i) in getListPacientes"
         :key="i"
         align="center"
@@ -125,11 +129,11 @@
               small
               class="text-truncate"
               :color="hover ? 'secondary' : 'primary'"
-              :class="hover ? 'background--text' : 'background--text'"
+              :class="hover ? 'text--text' : 'text--text'"
               style="text-transform: none !important; font-weight: bolder"
               @click="openStartAtendimento(paciente)"
             >
-              <v-icon class="background--text">mdi-book-account</v-icon>
+              <v-icon class="text--text">mdi-book-account</v-icon>
             </v-btn>
           </v-hover>
         </v-col>
@@ -140,7 +144,7 @@
               rounded
               class="text-truncate"
               :color="hover ? 'secondary' : 'primary'"
-              :class="hover ? 'background--text' : 'background--text'"
+              :class="hover ? 'text--text' : 'text--text'"
               max-width="160px"
               style="text-transform: none !important; font-weight: bolder"
               @click="openStartAtendimento(paciente)"
