@@ -29,10 +29,43 @@
       <v-col cols="8">
         <v-card class="background rounded-xl">
           <v-card-title class="justify-center">
-            <div>Histórico</div>
+            <div>Histórico de Atendimento</div>
           </v-card-title>
           <v-data-table> </v-data-table>
         </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="5">
+        <v-card class="background rounded-xl">
+          <v-card-title class="justify-center">
+            <div>Histórico de Exames</div>
+          </v-card-title>
+          <v-data-table> </v-data-table>
+        </v-card>
+      </v-col>
+      <v-col cols="5"></v-col>
+      <v-col cols="2" align-self="end">
+        <v-card-text style="height: 100px; position: relative">
+          <v-fab-transition>
+            <v-tooltip top>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  color="primary"
+                  dark
+                  absolute
+                  right
+                  fab
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  <v-icon>mdi-laptop-account</v-icon>
+                </v-btn>
+              </template>
+              <span> Iniciar Atendimento</span>
+            </v-tooltip>
+          </v-fab-transition>
+        </v-card-text>
       </v-col>
     </v-row>
   </v-container>
