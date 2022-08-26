@@ -67,15 +67,15 @@ export default {
     },
   }),
   computed: {
-    ...mapGetters("drivers", ["getDriversPagination"]),
+    ...mapGetters("agendamentos", ["getAgendamentosPagination"]),
     isCurrentPage() {
-      return this.$store.getters["drivers/getDriversPagination"].currentPage;
+      return this.$store.getters["agendamentos/getAgendamentosPagination"]
+        .currentPage;
     },
   },
   methods: {
-    ...mapActions("drivers", ["drivers", "shippingsCompany", "setIsLoading"]),
+    ...mapActions("agendamentos", ["agendamentos", "setIsLoading"]),
     openCreateDrivers() {
-      this.shippingsCompany();
       this.reRender += 1;
       this.dialogCreateDrivers = true;
     },

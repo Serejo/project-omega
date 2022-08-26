@@ -220,15 +220,15 @@ export default {
     // this.listDrivers(this.urlParams);
   },
   computed: {
-    // ...mapGetters("drivers", [
-    //   "getListingDrivers",
-    //   "getDriversPagination",
+    // ...mapGetters("agendamentos", [
+    //   "getListingAgendamentos",
+    //   "getAgendamentosPagination",
     //   "getListingCompanys",
     //   "getIsLoading",
     // ]),
   },
   methods: {
-    // ...mapActions("drivers", ["drivers", "shippingsCompany", "setIsLoading"]),
+    // ...mapActions("agendamentos", ["agendamentos", "setIsLoading"]),
     async proxPage(page) {
       this.setIsLoading(true);
       this.urlParams = {
