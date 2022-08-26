@@ -37,20 +37,22 @@
                   font-weight-medium
                   text-body-1 text-left
                   align-self-start
+                  navy--text
                 "
                 >{{ item.title }}</v-list-item-title
               >
             </v-list-item-content>
           </v-list-item>
           <v-list-item class="mt-6" @click="logout()">
-            <v-list-item-icon>
+            <v-list-item-icon class="mr-4">
               <v-icon>mdi-logout</v-icon>
             </v-list-item-icon>
             <v-list-item-title
               class="
                 font-weight-medium
-                text-body-1 text-start
+                text-body-1 text-left
                 align-self-center
+                navy--text
               "
               >Sair</v-list-item-title
             >
