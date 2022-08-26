@@ -15,7 +15,8 @@ export default new Vuetify({
       light: {
         primary: "#371E56",
         secondary: "#46216D",
-        orange: "#f5821f",
+        orange: "#FF8212",
+        yellow: "FFB353",
         background: "#ffffff",
         base: "#f3f4f6",
         base_dark: "#dadfe0",
@@ -25,7 +26,8 @@ export default new Vuetify({
       dark: {
         primary: "#371E56",
         secondary: "#46216D",
-        orange: "#f5821f",
+        orange: "#FF8212",
+        yellow: "FFB353",
         background: "#222426",
         base: "#181a1b",
         base_dark: "#2b2f31",
