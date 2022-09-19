@@ -2,28 +2,68 @@
   <div class="background rounded-xl">
     <v-row class="mx-auto my-auto mt-3">
       <v-col align="start" cols="4">
-        <div class="pa-2 text-truncate font-weight-bold">Nome</div>
+        <div
+          class="
+            pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            text-truncate
+            navy--text
+            font-weight-bold
+          "
+        >
+          Nome
+        </div>
       </v-col>
       <v-col align="start" cols="1">
-        <div class="pa-2 text-truncate font-weight-bold">Status</div>
+        <div
+          class="
+            pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            text-truncate
+            navy--text
+            font-weight-bold
+          "
+        >
+          Status
+        </div>
       </v-col>
       <v-col align="center" cols="2">
-        <div class="pa-2 text-truncate font-weight-bold">Data Nasc.</div>
+        <div
+          class="
+            pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            text-truncate
+            navy--text
+            font-weight-bold
+          "
+        >
+          Data Nasc.
+        </div>
       </v-col>
 
       <v-col align="center" cols="2">
-        <div class="pa-2 text-truncate font-weight-bold">Sexo</div>
+        <div
+          class="
+            pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
+            text-truncate
+            navy--text
+            font-weight-bold
+          "
+        >
+          Sexo
+        </div>
       </v-col>
       <v-col align="start" cols="3"> </v-col>
     </v-row>
     <div v-if="!getIsLoading">
       <v-row
-        class="list-card background text--text mx-auto my-auto mt-2"
+        class="list-card background navy--text mx-auto my-auto mt-2"
         v-for="(paciente, i) in getListPacientes"
         :key="i"
         align="center"
       >
-        <v-col cols="12" sm="4" md="4" lg="4" xl="4" align="start">
+        <v-col cols="4" sm="4" md="4" lg="4" xl="4" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Nome:</b>
           </span>
@@ -31,7 +71,7 @@
             {{ paciente.nomeCompleto }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="center">
+        <v-col cols="2" sm="2" md="1" lg="1" xl="1" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Status:</b>
           </span>
@@ -43,7 +83,7 @@
             {{ paciente.status }}
           </v-chip>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="center">
+        <v-col cols="3" sm="3" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Data Nascimento:</b>
           </span>
@@ -52,7 +92,7 @@
           </div>
         </v-col>
 
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="center">
+        <v-col cols="3" sm="3" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Sexo:</b>
           </span>
@@ -81,7 +121,7 @@
             </v-tooltip>
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1">
+        <v-col cols="6" sm="6" md="1" lg="1" xl="1">
           <v-hover v-slot="{ hover }">
             <v-btn
               fab
@@ -89,22 +129,22 @@
               small
               class="text-truncate"
               :color="hover ? 'secondary' : 'primary'"
-              :class="hover ? 'background--text' : 'background--text'"
+              :class="hover ? 'text--text' : 'text--text'"
               style="text-transform: none !important; font-weight: bolder"
               @click="openStartAtendimento(paciente)"
             >
-              <v-icon class="background--text">mdi-book-account</v-icon>
+              <v-icon class="text--text">mdi-book-account</v-icon>
             </v-btn>
           </v-hover>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2">
+        <v-col cols="2" sm="2" md="2" lg="2" xl="2">
           <v-hover v-slot="{ hover }">
             <v-btn
               block
               rounded
               class="text-truncate"
               :color="hover ? 'secondary' : 'primary'"
-              :class="hover ? 'background--text' : 'background--text'"
+              :class="hover ? 'text--text' : 'text--text'"
               max-width="160px"
               style="text-transform: none !important; font-weight: bolder"
               @click="openStartAtendimento(paciente)"

@@ -1,7 +1,7 @@
 <template>
   <div class="mt-3">
     <v-row no gutters class="justify-center mt-3">
-      <v-col cols="12" sm="6" md="4" lg="4" xl="4">
+      <v-col cols="6" sm="6" md="4" lg="4" xl="4">
         <v-row no-gutters>
           <v-text-field
             placeholder="Nome"
@@ -14,7 +14,7 @@
           </v-text-field>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="6" md="1" lg="1" xl="1">
+      <v-col cols="1">
         <v-row no-gutters>
           <v-hover v-slot="{ hover }">
             <v-btn
@@ -22,21 +22,21 @@
               block
               @click="search"
               :color="hover ? 'secondary' : 'primary'"
-              class="background--text text-truncate"
+              class="text--text text-truncate"
               style="text-transform: none !important; font-weight: bolder"
               ><v-icon>mdi-filter-outline</v-icon></v-btn
             >
           </v-hover>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="6" md="3" lg="3" xl="3">
+      <v-col cols="6" sm="6" md="3" lg="3" xl="3">
         <v-row no-gutters>
           <v-hover v-slot="{ hover }">
             <v-btn
               rounded
               block
               :color="hover ? 'secondary' : 'primary'"
-              class="background--text text-truncate"
+              class="text--text text-truncate"
               @click="openCreateDrivers"
               style="text-transform: none !important; font-weight: bolder"
               >Cadastrar Agendamento</v-btn

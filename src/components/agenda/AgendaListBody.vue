@@ -1,32 +1,56 @@
 <template>
   <div class="background rounded-xl">
     <v-row class="mx-auto my-auto mt-3">
-      <v-col align="start" cols="3">
-        <div class="pa-2 text-truncate font-weight-bold">Nome</div>
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="start"
+        cols="3"
+      >
+        <div class="pa-2 text-truncate navy--text font-weight-bold">Nome</div>
       </v-col>
-      <v-col align="start" cols="2">
-        <div class="pa-2 text-truncate font-weight-bold">Confirmado</div>
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="start"
+        cols="2"
+      >
+        <div class="pa-2 text-truncate navy--text font-weight-bold">
+          Confirmado
+        </div>
       </v-col>
-      <v-col align="start" cols="1">
-        <div class="pa-2 text-truncate font-weight-bold">Status</div>
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="start"
+        cols="1"
+      >
+        <div class="pa-2 text-truncate navy--text font-weight-bold">Status</div>
       </v-col>
-      <v-col align="center" cols="1">
-        <div class="pa-2 text-truncate font-weight-bold">Data</div>
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="center"
+        cols="1"
+      >
+        <div class="pa-2 text-truncate navy--text font-weight-bold">Data</div>
       </v-col>
 
-      <v-col align="center" cols="3">
-        <div class="pa-2 text-truncate font-weight-bold">Convênio</div>
+      <v-col
+        class="d-none d-sm-none d-md-block d-lg-block d-xl-block"
+        align="center"
+        cols="3"
+      >
+        <div class="pa-2 text-truncate navy--text font-weight-bold">
+          Convênio
+        </div>
       </v-col>
       <v-col align="start" cols="2"> </v-col>
     </v-row>
     <div v-if="!getIsLoading">
       <v-row
-        class="list-card background text--text mx-auto my-auto mt-2"
+        class="list-card background navy--text mx-auto my-auto mt-2"
         v-for="(agendado, i) in getListAgendamentos"
         :key="i"
         align="center"
       >
-        <v-col cols="12" sm="4" md="3" lg="3" xl="3" align="start">
+        <v-col cols="6" sm="4" md="3" lg="3" xl="3" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Nome:</b>
           </span>
@@ -34,7 +58,7 @@
             {{ agendado.nomeCompleto }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="2" lg="2" xl="2" align="start">
+        <v-col cols="6" sm="4" md="2" lg="2" xl="2" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Confirmado:</b>
           </span>
@@ -49,7 +73,7 @@
             {{ agendado.confirmado ? "Sim" : "Não" }}
           </div>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="start">
+        <v-col cols="6" sm="4" md="1" lg="1" xl="1" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Status:</b>
           </span>
@@ -61,7 +85,7 @@
             {{ agendado.status }}
           </v-chip>
         </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1" align="start">
+        <v-col cols="6" sm="4" md="1" lg="1" xl="1" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Data/Hora:</b>
           </span>
@@ -85,13 +109,13 @@
               rounded
               class="text-truncate"
               :color="hover ? 'secondary' : 'primary'"
-              :class="hover ? 'background--text' : 'background--text'"
+              :class="hover ? 'text--text' : 'text--text'"
               max-width="160px"
               style="text-transform: none !important; font-weight: bolder"
               @click="openStartAtendimento(agendado)"
             >
               Consulta
-              <v-icon class="background--text ml-2"
+              <v-icon class="text--text ml-2"
                 >mdi-arrow-top-right-bold-box</v-icon
               >
             </v-btn>
@@ -196,15 +220,15 @@ export default {
     // this.listDrivers(this.urlParams);
   },
   computed: {
-    // ...mapGetters("drivers", [
-    //   "getListingDrivers",
-    //   "getDriversPagination",
+    // ...mapGetters("agendamentos", [
+    //   "getListingAgendamentos",
+    //   "getAgendamentosPagination",
     //   "getListingCompanys",
     //   "getIsLoading",
     // ]),
   },
   methods: {
-    // ...mapActions("drivers", ["drivers", "shippingsCompany", "setIsLoading"]),
+    // ...mapActions("agendamentos", ["agendamentos", "setIsLoading"]),
     async proxPage(page) {
       this.setIsLoading(true);
       this.urlParams = {

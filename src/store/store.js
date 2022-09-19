@@ -6,6 +6,7 @@ import notifications from "./notifications";
 import login from "./login";
 import whoami from "./whoami";
 import menu from "./menu";
+import agendamentos from "./agendamentos";
 
 Vue.use(Vuex);
 
@@ -20,6 +21,7 @@ export default new Vuex.Store({
     login,
     whoami,
     menu,
+    agendamentos,
   },
   plugins: [vuexLocal.plugin],
 });

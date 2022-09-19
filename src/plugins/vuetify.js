@@ -13,19 +13,21 @@ export default new Vuetify({
     dark: false,
     themes: {
       light: {
-        primary: "#9333ea",
-        secondary: "#c084fc",
-        orange: "#f5821f",
+        primary: "#371E56", //9333ea - cor mais clara
+        secondary: "#46216D", // c084fc - cor mais clara
+        orange: "#FF8212",
+        yellow: "FFB353",
         background: "#ffffff",
         base: "#f3f4f6",
         base_dark: "#dadfe0",
         navy: "#0f2733",
-        text: "#002233",
+        text: "#eeeeee",
       },
       dark: {
-        primary: "#9333ea",
-        secondary: "#c084fc",
-        orange: "#f5821f",
+        primary: "#371E56",
+        secondary: "#46216D",
+        orange: "#FF8212",
+        yellow: "FFB353",
         background: "#222426",
         base: "#181a1b",
         base_dark: "#2b2f31",
