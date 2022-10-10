@@ -1,4 +1,4 @@
-# lauduz-project
+# Studies Project
 
 ## Project setup
 ```
