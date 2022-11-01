@@ -1,24 +1,26 @@
-# Studies Project
+<h1 align="center">Project Omega - Vue.js</h1>
 
-## Project setup
-```
-npm install
-```
+Este projeto foi feito com a intenção de estudo do Vue e Vuex.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+## ✨ Tecnologias
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Vue.js 2 ](https://vuejs.org/)
+- [Vuex](https://vuex.vuejs.org/)
+- [JSON Web Token](https://jwt.io/)
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 🚀 Como executar
+
+
+- Clone o repositório e acesse a pasta;
+- Crie um arquivo env.js e preencha com o baseUrl.
+- Instale as dependências com `npm i`
+- Inicie o servidor com `npm run serve`
+
+
