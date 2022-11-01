@@ -1,6 +1,10 @@
 <h1 align="center">Project Omega - Vue.js</h1>
 
 Este projeto foi feito com a intenção de estudo do Vue e Vuex.
+
+
+This project was made with the intention of studying Vue and Vuex.
+
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
