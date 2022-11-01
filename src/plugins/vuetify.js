@@ -24,8 +24,8 @@ export default new Vuetify({
         text: "#eeeeee",
       },
       dark: {
-        primary: "#371E56",
-        secondary: "#46216D",
+        primary: "#4caf50",
+        secondary: "#7CE175",
         orange: "#FF8212",
         yellow: "FFB353",
         background: "#222426",

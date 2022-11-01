@@ -27,8 +27,8 @@
         class="align-self-center"
       >
         <div class="background rounded-xl mx-6">
-          <div>
-            <v-img src="../assets/logo.png" width="9rem" height="7rem"></v-img>
+          <div class="py-4">
+            <v-img src="../assets/logo.svg" width="9rem" height="7rem"></v-img>
             <v-row no-gutters class="justify-center my-2">
               <v-col cols="10">
                 <v-text-field

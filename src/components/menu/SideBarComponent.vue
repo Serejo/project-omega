@@ -12,10 +12,10 @@
         <v-list-item-content>
           <v-list-item-title class="mt-0" style="text-align: -webkit-center">
             <v-img
-              src="../../assets/logo.png"
+              src="../../assets/logo.svg"
               class="mt-0 mb-0 justify-center"
-              width="50%"
-              height="7rem"
+              width="55%"
+              height="6rem"
             />
           </v-list-item-title>
         </v-list-item-content>
