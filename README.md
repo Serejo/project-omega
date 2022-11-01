@@ -4,7 +4,7 @@ Este projeto foi feito com a intenção de estudo do Vue e Vuex.
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#-technologies">Technologies </a>|&nbsp;&nbsp;&nbsp;
+    <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
      <a href="#-how-to-run">How to Run</a>
 </p>
 
