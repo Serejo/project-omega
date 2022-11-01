@@ -10,10 +10,11 @@
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="mt-0">
+          <v-list-item-title class="mt-0" style="text-align: -webkit-center">
             <v-img
               src="../../assets/logo.png"
               class="mt-0 mb-0 justify-center"
+              width="50%"
               height="7rem"
             />
           </v-list-item-title>

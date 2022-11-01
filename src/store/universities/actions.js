@@ -9,7 +9,6 @@ export default {
       errorMessage: "Ocorreu um erro na listagem",
     };
     let url = `search?`;
-    debugger;
     if (urlParams.name) {
       url = url.concat(`name=${urlParams.name}`);
     }

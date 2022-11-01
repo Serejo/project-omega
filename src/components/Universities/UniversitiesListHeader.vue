@@ -84,14 +84,6 @@ export default {
   computed: {},
   methods: {
     ...mapActions("universities", ["universities", "setIsLoading"]),
-    // openCreateDrivers() {
-    //   this.shippingsCompany();
-    //   this.reRender += 1;
-    //   this.dialogCreateDrivers = true;
-    // },
-    // closeCreateDrivers() {
-    //   this.dialogCreateDrivers = false;
-    // },
     async search() {
       this.searchIcon = "mdi-loading mdi-spin";
       this.setIsLoading(true);

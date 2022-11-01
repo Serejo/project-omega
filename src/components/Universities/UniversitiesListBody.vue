@@ -1,7 +1,7 @@
 <template>
   <div class="background rounded-xl">
     <v-row class="mx-auto my-auto mt-3">
-      <v-col align="start" cols="4">
+      <v-col align="start" cols="5">
         <div
           class="
             pa-2
@@ -51,7 +51,7 @@
             font-weight-bold
           "
         >
-          Sexo
+          Link
         </div>
       </v-col>
       <v-col align="start" cols="3"> </v-col>
@@ -63,7 +63,7 @@
         :key="i"
         align="center"
       >
-        <v-col cols="4" sm="4" md="4" lg="4" xl="4" align="start">
+        <v-col cols="5" align="start">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Nome:</b>
           </span>
@@ -90,34 +90,21 @@
 
         <v-col cols="3" sm="3" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
-            <b>Sexo:</b>
+            <b>Site:</b>
           </span>
 
-          <div
-            v-if="universities.sexo"
-            class="pa-2 text-wrap green--text font-weight-bold"
-          >
+          <div class="pa-2 text-wrap green--text font-weight-bold">
             <v-tooltip top>
               <template v-slot:activator="{ on, attrs }">
                 <v-icon class="" color="primary" v-bind="attrs" v-on="on"
-                  >mdi-face-man</v-icon
+                  >mdi-link</v-icon
                 >
               </template>
-              <span>Masculino</span>
-            </v-tooltip>
-          </div>
-          <div v-else class="pa-2 text-wrap red--text font-weight-bold">
-            <v-tooltip top>
-              <template v-slot:activator="{ on, attrs }">
-                <v-icon class="" color="primary" v-bind="attrs" v-on="on"
-                  >mdi-face-woman</v-icon
-                >
-              </template>
-              <span>Feminino</span>
+              <span>{{ universities.domains[0] }}</span>
             </v-tooltip>
           </div>
         </v-col>
-        <v-col cols="6" sm="6" md="1" lg="1" xl="1">
+        <!-- <v-col cols="6" sm="6" md="1" lg="1" xl="1">
           <v-hover v-slot="{ hover }">
             <v-btn
               fab
@@ -127,12 +114,12 @@
               :color="hover ? 'secondary' : 'primary'"
               :class="hover ? 'text--text' : 'text--text'"
               style="text-transform: none !important; font-weight: bolder"
-              @click="openStartAtendimento(universities)"
+              @click="openSiteUniversity(universities)"
             >
               <v-icon class="text--text">mdi-book-account</v-icon>
             </v-btn>
           </v-hover>
-        </v-col>
+        </v-col> -->
         <v-col cols="2" sm="2" md="2" lg="2" xl="2">
           <v-hover v-slot="{ hover }">
             <v-btn
@@ -143,9 +130,9 @@
               :class="hover ? 'text--text' : 'text--text'"
               max-width="160px"
               style="text-transform: none !important; font-weight: bolder"
-              @click="openStartAtendimento(paciente)"
+              @click="openSiteUniversity(universities)"
             >
-              Site
+              Access Link
             </v-btn>
           </v-hover>
         </v-col>
@@ -214,19 +201,14 @@ export default {
     async proxPage(page) {
       this.setIsLoading(true);
       this.urlParams = {
-        page: page,
-        initialDate: "",
-        finalDate: "",
-        status: "",
+        search: "Brazil",
       };
       await this.universities(this.urlParams);
       this.setIsLoading(false);
     },
 
-    openStartAtendimento(agendado) {
-      this.reRender += 1;
-      this.startAtendimentoDialog = true;
-      this.agendado = agendado;
+    openSiteUniversity(university) {
+      window.open(university.web_pages[0], "_blank");
     },
 
     closeButton() {

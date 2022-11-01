@@ -28,7 +28,7 @@
       >
         <div class="background rounded-xl mx-6">
           <div>
-            <v-img src="../assets/logo.png" width="18rem" height="7rem"></v-img>
+            <v-img src="../assets/logo.png" width="9rem" height="7rem"></v-img>
             <v-row no-gutters class="justify-center my-2">
               <v-col cols="10">
                 <v-text-field

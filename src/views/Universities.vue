@@ -9,7 +9,7 @@ import UniversitiesListBody from "../components/Universities/UniversitiesListBod
 import UniversitiesListHeader from "../components/Universities/UniversitiesListHeader.vue";
 export default {
   components: { UniversitiesListHeader, UniversitiesListBody },
-  name: "PacientesPage",
+  name: "UniversitiesPage",
 };
 </script>
 <style lang="">
