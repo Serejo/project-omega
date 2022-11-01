@@ -3,12 +3,7 @@ import VueRouter from "vue-router";
 import store from "@/store/store";
 
 import HomeLogin from "../views/HomeLogin.vue";
-import Dashboard from "../views/Dashboard.vue";
-import Agenda from "../views/Agenda.vue";
-import Pacientes from "../views/Pacientes.vue";
-import Prontuario from "../views/Prontuario.vue";
-import Perfis from "../views/Perfis.vue";
-import Usuarios from "../views/Usuarios.vue";
+import Universities from "../views/Universities.vue";
 
 Vue.use(VueRouter);
 
@@ -22,34 +17,9 @@ const router = new VueRouter({
       component: HomeLogin,
     },
     {
-      name: "Dashboard",
-      path: "/dashboard",
-      component: Dashboard,
-    },
-    {
-      name: "Pacientes",
-      path: "/pacientes",
-      component: Pacientes,
-    },
-    {
-      name: "Agenda",
-      path: "/agenda",
-      component: Agenda,
-    },
-    {
-      name: "Prontuario",
-      path: "/prontuario",
-      component: Prontuario,
-    },
-    {
-      name: "Perfis",
-      path: "/perfis",
-      component: Perfis,
-    },
-    {
-      name: "Usuarios",
-      path: "/usuarios",
-      component: Usuarios,
+      name: "Universities",
+      path: "/Universities",
+      component: Universities,
     },
   ],
 });

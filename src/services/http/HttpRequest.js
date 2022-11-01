@@ -1,6 +1,6 @@
 import { getJwtToken } from "../jwtToken";
 import router from "../../router";
-import  env  from "../../../env"
+import env from "../../../env";
 
 export class HttpRequest {
   url = "";

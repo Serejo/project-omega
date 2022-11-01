@@ -18,7 +18,7 @@ export default {
       commit("setLogin");
       // commit("setMyPermissions", response.data.data.permissions);
       localStorage.setItem("token", response.data.token);
-      router.push("/dashboard");
+      router.push("/Universities");
       return;
     } else {
       let errorObj = {

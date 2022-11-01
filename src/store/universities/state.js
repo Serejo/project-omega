@@ -1,6 +1,6 @@
 export default {
-  listingAgendamentos: [],
-  agendamentosPagination: {
+  listingUniversities: [],
+  universitiesPagination: {
     total: 0,
     perPage: 0,
     currentPage: 0,

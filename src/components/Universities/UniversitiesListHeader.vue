@@ -1,11 +1,26 @@
 <template>
   <div class="mt-3">
-    <v-row no gutters class="justify-center mt-3" justify="center">
+    <v-row no gutters class="justify-center mt-3">
       <v-col cols="6" sm="6" md="4" lg="4" xl="4">
         <v-row no-gutters>
           <v-text-field
-            placeholder="Nome"
+            placeholder="Name of the Country"
             v-model="urlParams.search"
+            @keyup.enter="search"
+            clearable
+            dense
+            solo
+            flat
+          >
+          </v-text-field>
+        </v-row>
+      </v-col>
+      <v-col cols="6" sm="6" md="4" lg="4" xl="4">
+        <v-row no-gutters>
+          <v-text-field
+            placeholder="Name of the University"
+            v-model="urlParams.name"
+            @keyup.enter="search"
             clearable
             dense
             solo
@@ -29,7 +44,7 @@
           </v-hover>
         </v-row>
       </v-col>
-      <v-col cols="6" sm="6" md="3" lg="3" xl="3">
+      <!-- <v-col cols="6" sm="6" md="3" lg="3" xl="3">
         <v-row no-gutters>
           <v-hover v-slot="{ hover }">
             <v-btn
@@ -43,16 +58,16 @@
             >
           </v-hover>
         </v-row>
-      </v-col>
+      </v-col> -->
     </v-row>
-    <v-dialog v-model="dialogCreateDrivers" max-width="600" :key="reRender">
+    <!-- <v-dialog v-model="dialogCreateDrivers" max-width="600" :key="reRender">
       <create-drivers-modal @closeCreateDrivers="closeCreateDrivers" />
-    </v-dialog>
+    </v-dialog> -->
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   name: "AgendaListHeader",
@@ -66,22 +81,17 @@ export default {
       page: 1,
     },
   }),
-  computed: {
-    ...mapGetters("agendamentos", ["getAgendamentosPagination"]),
-    isCurrentPage() {
-      return this.$store.getters["agendamentos/getAgendamentosPagination"]
-        .currentPage;
-    },
-  },
+  computed: {},
   methods: {
-    ...mapActions("agendamentos", ["agendamentos", "setIsLoading"]),
-    openCreateDrivers() {
-      this.reRender += 1;
-      this.dialogCreateDrivers = true;
-    },
-    closeCreateDrivers() {
-      this.dialogCreateDrivers = false;
-    },
+    ...mapActions("universities", ["universities", "setIsLoading"]),
+    // openCreateDrivers() {
+    //   this.shippingsCompany();
+    //   this.reRender += 1;
+    //   this.dialogCreateDrivers = true;
+    // },
+    // closeCreateDrivers() {
+    //   this.dialogCreateDrivers = false;
+    // },
     async search() {
       this.searchIcon = "mdi-loading mdi-spin";
       this.setIsLoading(true);
@@ -89,7 +99,7 @@ export default {
         page: this.isCurrentPage,
         search: this.urlParams.search,
       };
-      await this.drivers(urlParams);
+      await this.universities(urlParams);
       this.setIsLoading(false);
       this.searchIcon = "mdi-magnify";
     },

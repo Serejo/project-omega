@@ -13,8 +13,8 @@ export default new Vuetify({
     dark: false,
     themes: {
       light: {
-        primary: "#371E56", //9333ea - cor mais clara
-        secondary: "#46216D", // c084fc - cor mais clara
+        primary: "#4caf50", //9333ea - cor mais clara
+        secondary: "#7CE175", // c084fc - cor mais clara
         orange: "#FF8212",
         yellow: "FFB353",
         background: "#ffffff",

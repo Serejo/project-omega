@@ -1,69 +1,57 @@
 <template>
-  <div class="background rounded-b-xl">
+  <div class="background rounded-xl">
     <v-row class="mx-auto my-auto mt-3">
       <v-col align="start" cols="4">
         <div
           class="
-            d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
             text-truncate
             navy--text
             font-weight-bold
           "
         >
-          Usuário
+          Universities
         </div>
       </v-col>
       <v-col align="start" cols="1">
         <div
           class="
-            d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
             text-truncate
             navy--text
             font-weight-bold
           "
         >
-          Status
+          Code
         </div>
       </v-col>
       <v-col align="center" cols="2">
         <div
           class="
-            d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
             text-truncate
             navy--text
             font-weight-bold
           "
         >
-          Perfil
+          Country
         </div>
       </v-col>
+
       <v-col align="center" cols="2">
         <div
           class="
-            d-none d-sm-none d-md-block d-lg-block d-xl-block
             pa-2
+            d-none d-sm-none d-md-block d-lg-block d-xl-block
             text-truncate
             navy--text
             font-weight-bold
           "
         >
-          Confirmado
-        </div>
-      </v-col>
-      <v-col align="center" cols="2">
-        <div
-          class="
-            d-none d-sm-none d-md-block d-lg-block d-xl-block
-            pa-2
-            text-truncate
-            navy--text
-            font-weight-bold
-          "
-        >
-          Empresa
+          Sexo
         </div>
       </v-col>
       <v-col align="start" cols="3"> </v-col>
@@ -71,7 +59,7 @@
     <div v-if="!getIsLoading">
       <v-row
         class="list-card background navy--text mx-auto my-auto mt-2"
-        v-for="(paciente, i) in getListPacientes"
+        v-for="(universities, i) in getListingUniversities"
         :key="i"
         align="center"
       >
@@ -80,52 +68,56 @@
             <b>Nome:</b>
           </span>
           <div class="pa-2 text-truncate">
-            {{ paciente.nomeCompleto }}
+            {{ universities.name }}
           </div>
         </v-col>
-        <v-col cols="4" sm="4" md="1" lg="1" xl="1" align="center">
+        <v-col cols="2" sm="2" md="1" lg="1" xl="1" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
             <b>Status:</b>
           </span>
-          <v-chip
-            class="pa-2 text-wrap"
-            text-color="white"
-            :color="paciente.corStatus"
-          >
-            {{ paciente.status }}
+          <v-chip class="pa-2 text-wrap" text-color="white" color="pink">
+            {{ universities.alpha_two_code }}
           </v-chip>
         </v-col>
-        <v-col cols="4" sm="4" md="2" lg="2" xl="2" align="center">
+        <v-col cols="3" sm="3" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
-            <b>Perfil:</b>
+            <b>País:</b>
           </span>
           <div class="pa-2 text-wrap">
-            {{ paciente.perfil }}
+            {{ universities.country }}
           </div>
         </v-col>
-        <v-col cols="6" sm="4" md="2" lg="2" xl="2" align="center">
+
+        <v-col cols="3" sm="3" md="2" lg="2" xl="2" align="center">
           <span class="d-md-none d-lg-none d-xl-none">
-            <b>Confirmado:</b>
+            <b>Sexo:</b>
           </span>
+
           <div
-            v-if="paciente.confirmado"
+            v-if="universities.sexo"
             class="pa-2 text-wrap green--text font-weight-bold"
           >
-            {{ paciente.confirmado ? "Sim" : "Não" }}
+            <v-tooltip top>
+              <template v-slot:activator="{ on, attrs }">
+                <v-icon class="" color="primary" v-bind="attrs" v-on="on"
+                  >mdi-face-man</v-icon
+                >
+              </template>
+              <span>Masculino</span>
+            </v-tooltip>
           </div>
           <div v-else class="pa-2 text-wrap red--text font-weight-bold">
-            {{ paciente.confirmado ? "Sim" : "Não" }}
+            <v-tooltip top>
+              <template v-slot:activator="{ on, attrs }">
+                <v-icon class="" color="primary" v-bind="attrs" v-on="on"
+                  >mdi-face-woman</v-icon
+                >
+              </template>
+              <span>Feminino</span>
+            </v-tooltip>
           </div>
         </v-col>
-        <v-col cols="6" sm="4" md="2" lg="2" xl="2">
-          <span class="d-md-none d-lg-none d-xl-none">
-            <b>Empresa:</b>
-          </span>
-          <div class="pa-2 text-wrap">
-            {{ paciente.empresa }}
-          </div>
-        </v-col>
-        <v-col cols="12" sm="4" md="1" lg="1" xl="1">
+        <v-col cols="6" sm="6" md="1" lg="1" xl="1">
           <v-hover v-slot="{ hover }">
             <v-btn
               fab
@@ -135,21 +127,37 @@
               :color="hover ? 'secondary' : 'primary'"
               :class="hover ? 'text--text' : 'text--text'"
               style="text-transform: none !important; font-weight: bolder"
-              @click="openStartAtendimento(paciente)"
+              @click="openStartAtendimento(universities)"
             >
               <v-icon class="text--text">mdi-book-account</v-icon>
             </v-btn>
           </v-hover>
         </v-col>
+        <v-col cols="2" sm="2" md="2" lg="2" xl="2">
+          <v-hover v-slot="{ hover }">
+            <v-btn
+              block
+              rounded
+              class="text-truncate"
+              :color="hover ? 'secondary' : 'primary'"
+              :class="hover ? 'text--text' : 'text--text'"
+              max-width="160px"
+              style="text-transform: none !important; font-weight: bolder"
+              @click="openStartAtendimento(paciente)"
+            >
+              Site
+            </v-btn>
+          </v-hover>
+        </v-col>
       </v-row>
-      <v-dialog v-model="startAtendimentoDialog" max-width="720">
+      <!-- <v-dialog v-model="startAtendimentoDialog" max-width="720">
         <start-atendimento-modal
           :key="reRender"
           :agendado="agendado"
           @closeButton="closeButton"
-          @drivers="listDrivers"
+          @drivers="getUniversities"
         />
-      </v-dialog>
+      </v-dialog> -->
       <v-row class="justify-center my-3">
         <v-pagination
           v-model="getAgendamentoPagination.currentPage"
@@ -174,86 +182,35 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import StartAtendimentoModal from "./DetalhesUsuarioModal.vue";
 
 export default {
-  components: {
-    StartAtendimentoModal,
-  },
+  components: {},
   data: () => ({
     reRender: 0,
     agendado: {},
     startAtendimentoDialog: false,
     isLoading: false,
     urlParams: {
+      search: "Brazil",
       page: 1,
     },
-    getListPacientes: [
-      {
-        nomeCompleto: "Fernando",
-        status: "ativo",
-        corStatus: "green",
-        confirmado: true,
-        data: "01/01/2020",
-        perfil: "Cirurgião",
-        empresa: "XPtO",
-      },
-      {
-        nomeCompleto: "Ricardo",
-        status: "ativo",
-        corStatus: "green",
-        confirmado: true,
-        data: "01/01/2020",
-        perfil: "Psicólogo",
-        empresa: "XPtO",
-      },
-      {
-        nomeCompleto: "Patricia",
-        status: "ativo",
-        corStatus: "green",
-        confirmado: false,
-        data: "01/01/2020",
-        perfil: "Médico Pediatra",
-        empresa: "XPtO",
-      },
-      {
-        nomeCompleto: "José",
-        status: "ativo",
-        corStatus: "green",
-        confirmado: false,
-        data: "01/01/2020",
-        perfil: "Médico Pediatra",
-        empresa: "XPtO",
-      },
-      {
-        nomeCompleto: "Elder",
-        status: "inativo",
-        corStatus: "red",
-        confirmado: true,
-        data: "01/01/2020",
-        perfil: "Médico Especialista",
-        empresa: "XPtO",
-      },
-    ],
-    getIsLoading: false, //TODO: remover
     getAgendamentoPagination: {
       currentPage: 1,
       lastPage: 1,
     },
   }),
   mounted() {
-    // this.listDrivers(this.urlParams);
+    this.getUniversities(this.urlParams);
   },
   computed: {
-    // ...mapGetters("drivers", [
-    //   "getListingDrivers",
-    //   "getDriversPagination",
-    //   "getListingCompanys",
-    //   "getIsLoading",
-    // ]),
+    ...mapGetters("universities", [
+      "getListingUniversities",
+      "getUniversitiesPagination",
+      "getIsLoading",
+    ]),
   },
   methods: {
-    // ...mapActions("drivers", ["drivers", "shippingsCompany", "setIsLoading"]),
+    ...mapActions("universities", ["universities", "setIsLoading"]),
     async proxPage(page) {
       this.setIsLoading(true);
       this.urlParams = {
@@ -262,7 +219,7 @@ export default {
         finalDate: "",
         status: "",
       };
-      await this.drivers(this.urlParams);
+      await this.universities(this.urlParams);
       this.setIsLoading(false);
     },
 
@@ -276,8 +233,8 @@ export default {
       this.editDialog = false;
     },
 
-    async listDrivers() {
-      await this.drivers(this.urlParams);
+    async getUniversities() {
+      await this.universities(this.urlParams);
     },
   },
 };

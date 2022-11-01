@@ -6,9 +6,17 @@
         sm="12"
         md="6"
         lg="6"
-        class="d-sm-none d-md-none d-md-block d-lg-block d-xl-block base_dark"
+        class="
+          d-sm-none d-md-none d-md-block d-lg-block d-xl-block
+          align-self-center
+        "
+        align="center"
       >
-        <v-img src="../assets/loginImage.png"></v-img>
+        <v-img
+          src="../assets/loginImage.svg"
+          width="50rem"
+          height="31rem"
+        ></v-img>
       </v-col>
       <v-col
         cols="8"

@@ -73,39 +73,9 @@ export default {
     return {
       items: [
         {
-          title: "Dashboard",
-          icon: "mdi-home-outline",
-          url: "/dashboard",
-          admin: true,
-        },
-        {
-          title: "Pacientes",
+          title: "Universities",
           icon: "mdi-account-multiple-outline",
-          url: "/pacientes",
-          admin: false,
-        },
-        {
-          title: "Agenda",
-          icon: "mdi-notebook-outline",
-          url: "/agenda",
-          admin: false,
-        },
-        {
-          title: "Prontuário",
-          icon: "mdi-file-document-outline",
-          url: "/prontuario",
-          admin: false,
-        },
-        // {
-        //   title: "Perfis",
-        //   icon: "mdi-clipboard-account-outline",
-        //   url: "/perfis",
-        //   admin: false,
-        // },
-        {
-          title: "Usuários",
-          icon: "mdi-account-supervisor-circle",
-          url: "/usuarios",
+          url: "/Universities",
           admin: false,
         },
       ],
