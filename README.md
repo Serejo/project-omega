@@ -1,9 +1,18 @@
 <h1 align="center">Project Omega - Vue.js</h1>
 
 Este projeto foi feito com a intenção de estudo do Vue e Vuex.
+Para acessar veja em:
+https://project-omega-seven.vercel.app/
+User: test
+senha: 123456
+Obs: é necessário permitir conexão HTTP na página. 
 
 
 This project was made with the intention of studying Vue and Vuex.
+To access the project:
+https://project-omega-seven.vercel.app/
+User: test
+senha: 123456
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
